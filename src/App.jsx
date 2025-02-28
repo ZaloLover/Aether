@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import Sidebar from './components/layout/Sidebar';
+import Sidebar from './components/layout/SideBar';
 import MainContent from './components/layout/MainContent';
 import SettingsDialog from './components/settings/SettingsDialog';
 import SettingsButton from './components/ui/SettingsButton';
@@ -16,31 +16,31 @@ function App() {
   const sidebarTimerRef = useRef(null);
   const hoverZoneRef = useRef(null);
 
-  // Handle mouse entering hover zone
-  const handleMouseEnter = () => {
-    if (disableHoverSidebar) return; // Don't open if disabled
 
-    // Clear any existing timer
+  const handleMouseEnter = () => {
+    if (disableHoverSidebar) return; 
+
+
     if (sidebarTimerRef.current) {
       clearTimeout(sidebarTimerRef.current);
       sidebarTimerRef.current = null;
     }
 
-    // Open sidebar immediately
+
     setSidebarOpen(true);
   };
 
-  // Handle mouse leaving the sidebar area
+
   const handleMouseLeave = () => {
-    // Set a timer to close the sidebar after delay - reduced to 200ms
+  
     sidebarTimerRef.current = setTimeout(() => {
       setSidebarOpen(false);
     }, 200);
   };
 
-  // Load settings from localStorage on mount
+
   useEffect(() => {
-    // Load dark mode preference
+
     const isDarkMode = localStorage.getItem('darkMode') === 'true';
     setDarkMode(isDarkMode);
 
@@ -50,19 +50,19 @@ function App() {
       document.body.classList.remove('dark-mode');
     }
 
-    // Load hover sidebar preference
+ 
     const savedHoverSetting = localStorage.getItem('disableHoverSidebar');
     if (savedHoverSetting) {
       setDisableHoverSidebar(savedHoverSetting === 'true');
     }
   }, []);
 
-  // Save hover sidebar setting when changed
+
   useEffect(() => {
     localStorage.setItem('disableHoverSidebar', disableHoverSidebar.toString());
   }, [disableHoverSidebar]);
 
-  // Toggle dark mode
+
   const toggleDarkMode = () => {
     const newDarkMode = !darkMode;
     setDarkMode(newDarkMode);
@@ -75,7 +75,7 @@ function App() {
     }
   };
 
-  // Listen for settings toggle event
+
   useEffect(() => {
     const handleToggleSettings = () => {
       setShowSettings(prev => !prev);
@@ -91,15 +91,14 @@ function App() {
     };
   }, []);
 
-  // Add this state below your other state variables
+
   const [showFixedSettingsButton, setShowFixedSettingsButton] = useState(false);
 
-  // Add this effect after your other effects
+ 
   useEffect(() => {
-    // When hover sidebar is disabled and sidebar is closed, 
-    // show the fixed settings button with a slight delay
+
     if (disableHoverSidebar && !sidebarOpen) {
-      // Small delay for smoother transition
+
       const timer = setTimeout(() => {
         setShowFixedSettingsButton(true);
       }, 200);
@@ -110,7 +109,7 @@ function App() {
     }
   }, [disableHoverSidebar, sidebarOpen]);
 
-  // Then in the return statement, update the SettingsButton part:
+
   {
     disableHoverSidebar && !sidebarOpen && showFixedSettingsButton && (
       <SettingsButton onClick={() => setShowSettings(true)} />
@@ -120,7 +119,7 @@ function App() {
   return (
     <ChatProvider>
       <div className="app-container">
-        {/* Hover detection zone - only if not disabled */}
+        {}
         {!disableHoverSidebar && (
           <div
             className="hover-zone"
@@ -129,7 +128,7 @@ function App() {
           ></div>
         )}
 
-        {/* Sidebar with mouse leave detection */}
+        {}
         <div
           className={`sidebar-container ${sidebarOpen ? 'sidebar-open' : ''}`}
           onMouseLeave={handleMouseLeave}
@@ -140,17 +139,17 @@ function App() {
           />
         </div>
 
-        {/* Main content */}
+        {}
         <div className={`main-container ${sidebarOpen ? 'with-sidebar' : ''}`}>
           <MainContent />
         </div>
 
-        {/* Fixed settings button - only visible when hover sidebar is disabled */}
+        {}
         {disableHoverSidebar && !sidebarOpen && (
           <SettingsButton onClick={() => setShowSettings(true)} />
         )}
 
-        {/* Settings dialog */}
+        {}
         <SettingsDialog
           isOpen={showSettings}
           onClose={() => setShowSettings(false)}

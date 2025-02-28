@@ -29,7 +29,7 @@ const ChatInput = ({ onSendMessage, isLoading }) => {
         onChange={(e) => setMessage(e.target.value)}
         onKeyDown={handleKeyDown}
         disabled={isLoading}
-        rows="1" // Force single row
+        rows="1" 
       />
       <button
         type="submit"
