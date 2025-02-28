@@ -1,0 +1,143 @@
+.sidebar {
+  width: 256px;
+  height: 100vh;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  display: flex;
+  flex-direction: column;
+  z-index: 20;
+  position: relative;
+  box-shadow: var(--shadow-md);
+}
+
+.sidebar-header {
+  padding: 16px;
+}
+
+.new-chat-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px 16px;
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.new-chat-btn:hover {
+  background-color: var(--color-accent-hover);
+}
+
+.new-chat-btn svg {
+  margin-right: 8px;
+}
+
+.chat-history {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.history-title {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-tertiary);
+}
+
+.chat-list {
+  list-style: none;
+  padding: 0 8px;
+}
+
+.chat-item {
+  margin-bottom: 4px;
+}
+
+.chat-button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px 12px;
+  text-align: left;
+  border: none;
+  background: none;
+  color: var(--color-text-primary);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.chat-button:hover {
+  background-color: var(--color-bg-tertiary);
+}
+
+.chat-button.active {
+  background-color: var(--color-bg-tertiary);
+}
+
+.chat-icon {
+  margin-right: 12px;
+  color: var(--color-text-tertiary);
+}
+
+.chat-info {
+  flex: 1;
+  overflow: hidden;
+}
+
+.chat-title {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chat-date {
+  display: block;
+  font-size: 12px;
+  color: var(--color-text-tertiary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.empty-history {
+  text-align: center;
+  color: var(--color-text-tertiary);
+  padding: 16px;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.sidebar-footer {
+  padding: 16px;
+  border-top: 1px solid var(--color-border);
+}
+
+.settings-button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  background: none;
+  color: var(--color-text-primary);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.settings-button:hover {
+  background-color: var(--color-bg-tertiary);
+}
+
+.settings-icon {
+  margin-right: 12px;
+  color: var(--color-text-tertiary);
+}
+

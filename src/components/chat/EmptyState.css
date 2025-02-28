@@ -1,0 +1,132 @@
+.empty-state {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 180px);
+  overflow: hidden;
+}
+
+.empty-state__header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.empty-state__icon {
+  margin-bottom: 16px;
+  color: var(--color-accent);
+}
+
+.empty-state__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 8px;
+}
+
+.empty-state__description {
+  font-size: 16px;
+  color: var(--color-text-tertiary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.suggestion-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.suggestion-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 24px;
+  background-color: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 100%;
+  box-shadow: var(--shadow-sm);
+}
+
+.suggestion-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-accent);
+  box-shadow: var(--shadow-lg);
+}
+
+.suggestion-card__icon {
+  margin-bottom: 16px;
+  padding: 12px;
+  background-color: var(--color-bg-secondary);
+  border-radius: 12px;
+  color: var(--color-accent);
+}
+
+.suggestion-card__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0 0 8px 0;
+}
+
+.suggestion-card__description {
+  font-size: 14px;
+  color: var(--color-text-tertiary);
+  margin: 0 0 16px 0;
+}
+
+.suggestion-card__example {
+  font-size: 14px;
+  color: var(--color-accent);
+  margin-top: auto;
+  font-weight: 500;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .suggestion-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .empty-state {
+    min-height: calc(100vh - 160px);
+    padding: 20px;
+  }
+}
+
+/* Update empty state star icon to be monochrome */
+.empty-state__title::before {
+  content: '✧';
+  display: inline-block;
+  margin-right: 10px;
+  color: #666666;
+  /* Grey in light mode */
+}
+
+body.dark-mode .empty-state__title::before {
+  color: #a0a0a0;
+  /* Light grey in dark mode */
+}
+
+body.dark-mode .suggestion-card {
+  background-color: #444444; /* Darker grey for dark mode */
+  border-color: #353535; /* Dark grey border */
+}
+
+body.dark-mode .empty-state__description {
+  color: #ffffff;
+}
+
+body.dark-mode .suggestion-card__icon {
+  background-color: #3a3a3a; 
+}
+

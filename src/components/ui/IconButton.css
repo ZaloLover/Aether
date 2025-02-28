@@ -1,0 +1,73 @@
+.icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+  }
+  
+  .icon-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+  
+  /* Sizes */
+  .icon-button--small {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+  
+  .icon-button--medium {
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+  }
+  
+  .icon-button--large {
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+  }
+  
+  /* Variants */
+  .icon-button--primary {
+    background-color: #5436DA;
+    color: white;
+  }
+  
+  .icon-button--primary:hover:not(:disabled) {
+    background-color: #7A64E1;
+  }
+  
+  .icon-button--primary:active:not(:disabled) {
+    background-color: #3F29A8;
+  }
+  
+  .icon-button--secondary {
+    background-color: #F3F4F6;
+    color: #1F2937;
+  }
+  
+  .icon-button--secondary:hover:not(:disabled) {
+    background-color: #E5E7EB;
+  }
+  
+  .icon-button--secondary:active:not(:disabled) {
+    background-color: #D1D5DB;
+  }
+  
+  .icon-button--ghost {
+    background-color: transparent;
+    color: #5436DA;
+  }
+  
+  .icon-button--ghost:hover:not(:disabled) {
+    background-color: rgba(84, 54, 218, 0.05);
+  }
+  
+  .icon-button--ghost:active:not(:disabled) {
+    background-color: rgba(84, 54, 218, 0.1);
+  }

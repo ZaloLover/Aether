@@ -1,0 +1,32 @@
+.copy-button {
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    background-color: transparent;
+    border: none;
+    color: var(--color-text-tertiary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    opacity: 0;
+  }
+  
+  .message-content:hover .copy-button {
+    opacity: 1;
+  }
+  
+  .copy-button:hover {
+    background-color: var(--color-bg-tertiary);
+    color: var(--color-text-primary);
+  }
+  
+  .copy-button.copied {
+    color: #10B981; /* Green color for success */
+    opacity: 1;
+  }
+  
+  .copy-button.copied:hover {
+    background-color: rgba(16, 185, 129, 0.1);
+  }

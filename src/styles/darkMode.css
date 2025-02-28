@@ -1,0 +1,140 @@
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #444444;
+    color: #F9FAFB;
+  }
+  
+  /* Sidebar dark mode */
+  body.dark-mode .sidebar {
+    background-color: #444444;
+  }
+  
+  body.dark-mode .history-title {
+    color: #d1d1d1;
+  }
+  
+  body.dark-mode .empty-history {
+    color: #a6a8ac;
+  }
+  
+  body.dark-mode .settings-button {
+    color: #D1D5DB;
+  }
+  
+  body.dark-mode .settings-button:hover {
+    background-color: #606163;
+  }
+  
+  body.dark-mode .chat-title {
+    color: #F9FAFB;
+  }
+  
+  body.dark-mode .chat-item-button.active {
+    background-color: #5d5e5f;
+  }
+  
+  body.dark-mode .chat-select-area:hover {
+    background-color: #595a5c;
+  }
+  
+  body.dark-mode .chat-rename-input {
+    background-color: #5a5d63;
+    border-color: #75777a;
+    color: #F9FAFB;
+  }
+  
+  /* Main content dark mode */
+  body.dark-mode .main-content {
+    background-color: #444444;
+  }
+  
+  body.dark-mode .main-header {
+    background-color: #444444;
+    border-color: #2e2e2e;
+  }
+  
+  body.dark-mode .header-title {
+    color: #F9FAFB;
+  }
+  
+  body.dark-mode .menu-button {
+    color: #D1D5DB;
+  }
+  
+  body.dark-mode .menu-button:hover {
+    background-color: #505152;
+  }
+  
+  body.dark-mode .input-area {
+    background-color: #444444;
+    border-color: #374151;
+  }
+  
+  body.dark-mode .message-textarea {
+    background-color: #444444;
+    border-color: #616366;
+    color: #F9FAFB;
+  }
+  
+  body.dark-mode .message-textarea:focus {
+    border-color: #585858;
+  }
+  
+  body.dark-mode .char-counter {
+    color: #a6a9ad;
+  }
+  
+  /* Chat messages dark mode */
+  body.dark-mode .user-message {
+    background-color: #525252;
+  }
+  
+  body.dark-mode .claude-message {
+    background-color: #3a3a3a;
+  }
+  
+  body.dark-mode .message-sender {
+    color: #D1D5DB;
+  }
+  
+  body.dark-mode .message-text {
+    color: #F9FAFB;
+  }
+  
+  body.dark-mode .message-text code {
+    background-color: #606061;
+  }
+  
+  body.dark-mode .message-text pre {
+    background-color: #2D3748;
+  }
+  
+  /* Dialog dark mode */
+
+  
+  body.dark-mode .dialog {
+    background-color: #353535;
+    color: #F9FAFB;
+  }
+  
+  body.dark-mode .dialog-title {
+    color: #F9FAFB;
+  }
+  
+  body.dark-mode .dialog-message {
+    color: #D1D5DB;
+  }
+  
+  body.dark-mode .dialog-checkbox label {
+    color: #D1D5DB;
+  }
+  
+  body.dark-mode .dialog-button--cancel {
+    background-color: #46484b;
+    color: #F9FAFB;
+    border-color: #5c5e5f;
+  }
+  
+  body.dark-mode .dialog-button--cancel:hover {
+    background-color: #5d5f61;
+  }

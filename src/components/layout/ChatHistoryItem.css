@@ -1,0 +1,114 @@
+.chat-history-item {
+    margin-bottom: 4px;
+  }
+  
+  .chat-item-button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .chat-item-button.active {
+    background-color: var(--color-bg-tertiary);
+  }
+  
+  .chat-select-area {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 8px 12px;
+    text-align: left;
+    border: none;
+    background: none;
+    color: var(--color-text-primary);
+    border-radius: 6px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  
+  .chat-select-area:hover {
+    background-color: var(--color-bg-tertiary);
+  }
+  
+  .chat-icon {
+    margin-right: 12px;
+    color: var(--color-text-tertiary);
+    flex-shrink: 0;
+  }
+  
+  .chat-info {
+    flex: 1;
+    overflow: hidden;
+  }
+  
+  .chat-title {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+  }
+  
+  .chat-date {
+    display: block;
+    font-size: 12px;
+    color: var(--color-text-tertiary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .chat-actions {
+    display: none;
+    padding-right: 8px;
+  }
+  
+  .chat-item-button:hover .chat-actions {
+    display: flex;
+  }
+  
+  .chat-action-button {
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    color: var(--color-text-tertiary);
+    cursor: pointer;
+    margin-left: 2px;
+  }
+  
+  .chat-action-button:hover {
+    background-color: var(--color-bg-tertiary);
+    color: var(--color-text-primary);
+  }
+  
+  .chat-action-button--delete:hover {
+    background-color: rgba(220, 38, 38, 0.1);
+    color: #dc2626;
+  }
+  
+  .chat-rename-form {
+    padding: 6px 8px;
+    width: 100%;
+  }
+  
+  .chat-rename-input {
+    width: 100%;
+    background-color: var(--color-bg-tertiary);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    padding: 6px 8px;
+    font-size: 14px;
+    color: var(--color-text-primary);
+  }
+  
+  .chat-rename-input:focus {
+    outline: none;
+    border-color: var(--color-accent);
+  }

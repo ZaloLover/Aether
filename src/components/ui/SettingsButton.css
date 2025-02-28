@@ -1,0 +1,49 @@
+.settings-button-fixed {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    color: var(--color-text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 40;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.settings-button-fixed:hover {
+    background-color: var(--color-bg-tertiary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Update the fixed settings button in dark mode */
+body.dark-mode .settings-button-fixed {
+    background-color: #1e1e1e;
+    border: 1px solid #3a3a3a;
+    color: #f0f0f0;
+}
+
+body.dark-mode .settings-button-fixed:hover {
+    background-color: #2a2a2a;
+}

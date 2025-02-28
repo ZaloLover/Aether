@@ -1,0 +1,167 @@
+.message-container {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.avatar {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aether-avatar {
+  background-color: var(--color-accent);
+  color: var(--color-bg-primary);
+}
+
+body.dark-mode .aether-avatar {
+  background-color: white;
+  color: #121212;
+}
+
+body.dark-mode .user-avatar {
+  background-color: #2a2a2a;
+  color: #f0f0f0;
+}
+
+
+.user-avatar {
+  background-color: var(--color-bg-tertiary);
+  color: var(--color-text-primary);
+}
+
+.message-content {
+  flex: 1;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: var(--shadow-sm);
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.user-message {
+  background-color: var(--color-user-message);
+}
+
+.aether-message {
+  background-color: var(--color-ai-message);
+}
+
+.message-sender {
+  margin-bottom: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.message-text {
+  line-height: 1.6;
+  color: var(--color-text-primary);
+}
+
+/* Markdown styles */
+.message-text h1,
+.message-text h2,
+.message-text h3,
+.message-text h4,
+.message-text h5,
+.message-text h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--color-text-primary);
+}
+
+.message-text h1 {
+  font-size: 24px;
+}
+
+.message-text h2 {
+  font-size: 20px;
+}
+
+.message-text h3 {
+  font-size: 18px;
+}
+
+.message-text p {
+  margin-bottom: 16px;
+}
+
+.message-text ul,
+.message-text ol {
+  margin-bottom: 16px;
+  padding-left: 20px;
+}
+
+.message-text li + li {
+  margin-top: 4px;
+}
+
+.message-text pre {
+  margin-bottom: 16px;
+  padding: 16px;
+  background-color: var(--color-bg-secondary);
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+.message-text code {
+  padding: 2px 4px;
+  background-color: var(--color-bg-secondary);
+  border-radius: 4px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9em;
+}
+
+.message-text pre code {
+  padding: 0;
+  background-color: transparent;
+}
+
+/* Typing animation */
+.typing-content {
+  position: relative;
+}
+
+.cursor {
+  display: inline-block;
+  width: 2px;
+  height: 18px;
+  background-color: var(--color-accent);
+  margin-left: 2px;
+  animation: cursor-blink 1s infinite;
+}
+
+@keyframes cursor-blink {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+
+body.dark-mode .cursor {
+  background-color: white;
+}
+
+body.dark-mode .user-message {
+  background-color: #2a2a2a; /* Dark grey for user messages */
+}
+
+body.dark-mode .aether-message {
+  background-color: #3d3d3d; /* Darker grey for AI messages */
+}

@@ -1,0 +1,2 @@
+Main font: Inter (for UI elements and regular text)
+Monospace font: JetBrains Mono (for code blocks)

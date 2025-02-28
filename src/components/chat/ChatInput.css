@@ -1,0 +1,74 @@
+.input-container {
+  position: relative;
+  max-width: 650px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.message-textarea {
+  width: 100%;
+  padding: 12px 44px 12px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  resize: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  box-shadow: var(--shadow-sm);
+  min-height: 24px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.message-textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px rgba(42, 42, 42, 0.1);
+}
+
+.input-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  margin-top: 4px;
+}
+
+.char-counter {
+  font-size: 12px;
+  color: var(--color-text-tertiary);
+}
+
+.char-counter--warning {
+  color: #d4d4d4;
+}
+
+.send-button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.send-button:hover:not(:disabled) {
+  background-color: var(--color-accent-hover);
+}
+
+.send-button:disabled {
+  background-color: var(--color-bg-tertiary);
+  cursor: not-allowed;
+}
+
